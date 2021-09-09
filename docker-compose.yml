@@ -10,4 +10,5 @@ services:
         volumes:
             - /var/www/:/var/www
             - /etc/nginx/conf.d/:/etc/nginx/conf.d
-        networks: host
+            - /etc/letsencrypt/:/etc/letsencrypt
+        network_mode: host
