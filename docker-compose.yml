@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+    nginx:
+        build:
+            context: .
+        image: nginx
+        container_name: nginx
+        ports:
+            - "80:80"
+        volumes:
+            - /var/www/:/var/www
+            - /etc/nginx/conf.d/:/etc/nginx/conf.d
+        networks: host
